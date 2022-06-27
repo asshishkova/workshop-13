@@ -21,6 +21,13 @@ export const logInAction = (user, password) => {
     // TODO dispatch badUser() action if user is missing
     // TODO dispatch badPassword() action if ALLOWED_PASSWORD !== password
     // TODO dispatch logIn(user)
+    if (!user) {
+      dispatch(badUser());
+    } else if (ALLOWED_PASSWORD !== password) {
+      dispatch(badPassword());
+    } else {
+      dispatch(logIn(user));
+    }
   };
 };
 

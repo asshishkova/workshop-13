@@ -40,7 +40,7 @@ function CounterComponent({ loggedInUserName, badUser, badPassword, logInAction 
       <br />
       {!loggedInUserName && <button onClick={login}>Login</button>}
       {loggedInUserName && <button onClick={logout}>Logout</button>}
-      {badPassword && <div className="bad-pass">Bad password</div>}
+      {badPassword && <div className="bad-pass">Bad password!</div>}
       {badUser && <div className="bad-pass">Missing user</div>}
     </div>
   );
