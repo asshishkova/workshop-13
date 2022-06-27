@@ -7,6 +7,9 @@ const logIn = user => ({
 });
 
 // TODO create logout action
+const logOut = () => ({
+  type: actionsTypes.LOG_OUT
+});
 
 const badUser = () => ({
   type: actionsTypes.BAD_USER
@@ -30,5 +33,11 @@ export const logInAction = (user, password) => {
     }
   };
 };
+
+export const logOutAction = () => {
+  return dispatch => {
+    dispatch(logOut());
+  }
+}
 
 // TODO create logout action creator
