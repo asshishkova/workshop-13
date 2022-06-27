@@ -2,6 +2,7 @@ import { useCallback } from "react";
 
 function CounterComponent({ counterValue, isLoggedIn, incrementAction }) {
   const increment = useCallback(() => {
+    incrementAction();
     // TODO call incrementAction
   }, [incrementAction]);
   const decrement = useCallback(() => {
