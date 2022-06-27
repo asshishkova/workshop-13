@@ -1,13 +1,14 @@
 import { useCallback } from "react";
 
-function CounterComponent({ counterValue, isLoggedIn, incrementAction }) {
+function CounterComponent({ counterValue, isLoggedIn, incrementAction, decrementAction }) {
   const increment = useCallback(() => {
     incrementAction();
     // TODO call incrementAction
   }, [incrementAction]);
   const decrement = useCallback(() => {
+    decrementAction();
     // TODO call decrementAction
-  }, []);
+  }, [decrementAction]);
   const reset = useCallback(() => {
     // TODO call resetAction
   }, []);
