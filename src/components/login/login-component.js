@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { logOutAction } from "../../app/actions/login-actions";
+// import { logOutAction } from "../../app/actions/login-actions";
 import "./login-component.css";
 
 function LoginComponent({ loggedInUserName, badUser, badPassword, logInAction, logOutAction}) {
