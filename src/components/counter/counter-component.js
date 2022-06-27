@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 
-function CounterComponent({ counterValue, isLoggedIn, incrementAction, decrementAction }) {
+function CounterComponent({ counterValue, isLoggedIn, incrementAction, decrementAction, resetAction }) {
   const increment = useCallback(() => {
     incrementAction();
     // TODO call incrementAction
@@ -10,8 +10,9 @@ function CounterComponent({ counterValue, isLoggedIn, incrementAction, decrement
     // TODO call decrementAction
   }, [decrementAction]);
   const reset = useCallback(() => {
+    resetAction();
     // TODO call resetAction
-  }, []);
+  }, [resetAction]);
 
   const disabled = !isLoggedIn;
   return (
